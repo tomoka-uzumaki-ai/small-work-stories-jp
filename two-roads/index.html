@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>二枚の帰り道 · 港の協力ミニ謎解き</title><meta name="description" content="二枚のカードの情報を合わせて、予約された帰路を探す完結した協力ミニ謎解き。"><link rel="stylesheet" href="style.css"></head>
+<body><main><header><p class="eyebrow">無料公開の協力ミニ謎解き</p><h1>二枚の帰り道</h1><p class="subtitle">港の夜を分け合う、二人用の協力ミニ謎解き</p></header>
+<noscript>カードと解答の開閉にはJavaScriptが必要です。本文・カード・解答は同じフォルダのcontent.jsonでも読めます。</noscript>
+<section class="panel" aria-labelledby="intro"><h2 id="intro">今夜の依頼</h2><p>港の小さな展示会が終わった夜。友人の遥と周は、主催者が予約してくれた帰路の受付へ向かおうとしていた。机に残されたのは四つの案内と、二枚の確認カード。予約の条件は二枚に分かれている。行き先の駅はどの道も同じ。二人の情報を合わせて、予約済みの道を一つ見つけてほしい。</p><p class="note">AIを用いて制作したオリジナルのフィクション。登場する遥（31歳）と周（34歳）は架空の成人です。</p></section>
+<section class="panel" aria-labelledby="how"><h2 id="how">遊び方</h2><ol><li>道の案内は二人とも見られます。</li>
+<li>二人で遊ぶときは、別々の端末で同じHTMLを開くか、端末を順番に渡します。通信や部屋番号の入力はありません。</li>
+<li>一人がカードA、もう一人がカードBを選び、自分のカードだけを読んでください。端末を渡す前にカードを閉じます。カードの内容は口頭や手元のメモで共有できます。</li>
+<li>一人用では、AとBを順番に読んでメモし、二つの条件を合わせます。</li>
+<li>時刻はすべて同じ日の夜。表示時刻は道の入口で受付する時刻です。本文とカード以外の知識は使いません。</li></ol></section>
+<section class="panel" aria-labelledby="routes-heading"><h2 id="routes-heading">共有の案内 · 四つの帰り道</h2><div class="routes"><article class="route" data-route-id="lighthouse"><h3>灯台坂</h3><p><span class="time">19:10 受付</span>途中に屋根のない区間がある</p></article>
+<article class="route" data-route-id="wharf"><h3>波止場道</h3><p><span class="time">19:20 受付</span>入口から駅まで屋根が続く</p></article>
+<article class="route" data-route-id="market"><h3>市場通り</h3><p><span class="time">19:40 受付</span>入口から駅まで屋根が続く</p></article>
+<article class="route" data-route-id="oldtrack"><h3>旧線路の道</h3><p><span class="time">19:50 受付</span>途中に屋根のない区間がある</p></article></div><p class="note">時刻と屋根の案内は、どれも正しい情報です。四つから一つ選びます。</p></section>
+<section class="panel" aria-labelledby="cards-heading"><h2 id="cards-heading">自分のカードを開く</h2><p class="note">最初は二枚とも閉じています。同時に表示するのは一枚だけです。一人用では順番に読んでください。</p><div class="row"><button type="button" id="open-A" aria-controls="card-A" aria-expanded="false">カードAを見る</button><button type="button" id="open-B" aria-controls="card-B" aria-expanded="false">カードBを見る</button><button type="button" class="secondary" id="close-cards">カードを閉じる</button></div><p id="card-status" class="note" role="status" aria-live="polite">カードは閉じています。</p><article id="card-A" class="private-card" hidden><h3>カードA · 遥の封筒</h3><p>予約の受付は、午後七時を過ぎてから、港の時計の長針が最初に真下を向く前です。ちょうど真下を向いた時点では受付が終わっています。道の案内に書かれた時刻で受付してください。</p><details><summary>このカードのヒント</summary><p>午後七時のあと、長針が初めて真下を向くのは何時でしょう。</p></details></article>
+<article id="card-B" class="private-card" hidden><h3>カードB · 周の包み</h3><p>預かった紙の看板は、入口で透明なケースから出して、駅で返却するまでそのまま運びます。今夜は雨。予約の道は、入口から駅まで一度も傘を開かず、看板を雨にぬらさずに歩ける道です。案内に書かれた屋根は、どれも雨を防げます。</p><details><summary>このカードのヒント</summary><p>入口から駅まで、屋根が途切れない道を探しましょう。</p></details></article></section>
+<section class="panel" aria-labelledby="answer-heading"><h2 id="answer-heading">二人の情報を合わせたら</h2><p>予約された道はどれですか。Aだけ・Bだけでは決めず、両方の条件を満たす道を選んでください。</p><form id="answer-form"><fieldset><legend>帰り道を一つ選ぶ</legend><div class="answers"><label class="option"><input type="radio" name="route" value="lighthouse">灯台坂</label>
+<label class="option"><input type="radio" name="route" value="wharf">波止場道</label>
+<label class="option"><input type="radio" name="route" value="market">市場通り</label>
+<label class="option"><input type="radio" name="route" value="oldtrack">旧線路の道</label></div></fieldset><button type="submit">答え合わせ</button></form><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p><div class="row"><button type="button" class="secondary" id="toggle-solution" aria-controls="solution" aria-expanded="false">解答・理由・結末を開く</button><button type="button" class="secondary" id="reset">最初から</button></div><section id="solution" class="solution" hidden><h3>解答 · 波止場道</h3><p>カードAの時計の長針が真下を向く時刻は19:30。19:00より後、19:30より前の受付なので、灯台坂（19:10）と波止場道（19:20）が残ります。カードBでは屋根が入口から駅まで続く必要があり、波止場道と市場通りが残ります。両方に残るのは波止場道だけです。灯台坂は屋根の条件、市場通りは時刻の条件、旧線路の道は両方の条件を満たしません。</p><h3>帰り道のあと</h3><p>波止場道の受付で、遥は時刻のカードを、周は包みのカードを並べた。係の人は二枚を確かめ、小さな改札を開ける。屋根の向こうで雨が銀色に光った。駅に着くと、周は紙の看板を返却し、遥は展示会の案内を手帳へしまった。「あの絵、明るいところでも見たかったね」「来年の展示なら、昼にも見られるよ」。二人はそれぞれの電車のホームへ向かった。今夜の帰り道は、途中で一度も迷わなかった。</p></section></section>
+<footer><p class="note">この謎が決めるのは架空の予約された道だけです。相手の恋愛感情、同意、次の約束を判定する遊びではありません。物語はこの帰宅で完結します。</p><p class="note">無料の完成試作です。有料販売はしていません。入力やカードの選択は送信・保存されません。</p></footer><p><a href="../">小さな仕事の物語へ戻る</a> · <a href="two-roads-v1.0.0.zip" download>オフライン版ZIPを保存</a></p></main>
+<script>
+'use strict';
+const byId = id => document.getElementById(id);
+const cardIds = ['A', 'B'];
+function showCard(id) {
+  for (const cardId of cardIds) {
+    const visible = cardId === id;
+    byId('card-' + cardId).hidden = !visible;
+    byId('open-' + cardId).setAttribute('aria-expanded', String(visible));
+    if (!visible) for (const detail of byId('card-' + cardId).querySelectorAll('details')) detail.open = false;
+  }
+  byId('card-status').textContent = id ? 'カード' + id + 'だけを表示しています。端末を渡す前に閉じてください。' : 'カードは閉じています。';
+}
+for (const id of cardIds) byId('open-' + id).addEventListener('click', () => showCard(byId('card-' + id).hidden ? id : null));
+byId('close-cards').addEventListener('click', () => showCard(null));
+byId('answer-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const selected = document.querySelector('input[name="route"]:checked');
+  const feedback = byId('feedback');
+  feedback.hidden = false;
+  feedback.textContent = !selected ? 'まず帰り道を一つ選んでください。' : selected.value === 'wharf' ? '正解です。二枚の条件が同じ道につながりました。「解答・理由・結末を開く」で物語を最後まで読めます。' : 'この道では、少なくとも一枚の条件を満たせません。時刻と屋根の両方を確認してみてください。';
+});
+byId('toggle-solution').addEventListener('click', () => {
+  const opening = byId('solution').hidden;
+  byId('solution').hidden = !opening;
+  byId('toggle-solution').setAttribute('aria-expanded', String(opening));
+  byId('toggle-solution').textContent = opening ? '解答・理由・結末を閉じる' : '解答・理由・結末を開く';
+});
+byId('reset').addEventListener('click', () => {
+  showCard(null);
+  byId('answer-form').reset();
+  byId('feedback').hidden = true;
+  byId('feedback').textContent = '';
+  byId('solution').hidden = true;
+  byId('toggle-solution').setAttribute('aria-expanded', 'false');
+  byId('toggle-solution').textContent = '解答・理由・結末を開く';
+  byId('open-A').focus();
+});
+</script></body></html>

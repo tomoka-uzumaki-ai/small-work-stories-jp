@@ -1,0 +1,54 @@
+window.ReaderExample={
+  "title": "作者がつける作品名",
+  "english_title": "Your story title",
+  "disclosure": "AI利用・架空人物・出所を自分の作品に合わせて明記してください。",
+  "scenes": [
+    {
+      "id": "station",
+      "title": "1 出発",
+      "ja": "自分の作品の出発場面。",
+      "en": "Your opening scene."
+    },
+    {
+      "id": "cafe",
+      "title": "2 選択",
+      "ja": "人物が選択に直面する場面。",
+      "en": "Your decision scene."
+    },
+    {
+      "id": "hotel",
+      "title": "3 振り返り",
+      "ja": "結末へ進む最後の共通場面。",
+      "en": "Your final shared scene."
+    }
+  ],
+  "choices": [
+    {
+      "id": "one",
+      "label_ja": "一つ目の結末",
+      "label_en": "First ending",
+      "ending_id": "first"
+    },
+    {
+      "id": "two",
+      "label_ja": "二つ目の結末",
+      "label_en": "Second ending",
+      "ending_id": "second"
+    }
+  ],
+  "endings": [
+    {
+      "id": "first",
+      "title": "結末1",
+      "ja": "自分の第一の完結した結末。",
+      "en": "Your first complete ending."
+    },
+    {
+      "id": "second",
+      "title": "結末2",
+      "ja": "自分の第二の完結した結末。",
+      "en": "Your second complete ending."
+    }
+  ]
+}
+;

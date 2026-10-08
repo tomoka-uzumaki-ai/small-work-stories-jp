@@ -1,0 +1,85 @@
+{
+  "title": "Two Cards, One Way Home",
+  "subtitle": "A complete cooperative harbor mystery",
+  "version": "1.0",
+  "disclosure": "AI-assisted original fiction. Haruka, 31, and Shu, 34, are fictional adults.",
+  "introduction": "After a small harbor exhibition, friends Haruka and Shu are going to the return-route desk booked by their host. Four route notices and two confirmation cards remain on a table. The booking conditions are split between the cards. All routes lead to the same station. Combine the two cards to find the one booked route.",
+  "rules": [
+    "Both players may read the four route notices.",
+    "For two players, open this page on separate devices or pass one device. There is no connection or room code.",
+    "One player reads A, the other B. Close your card before passing the device. Talk or take your own notes.",
+    "For solo play, read A and B in turn and combine the conditions.",
+    "All times are on the same evening and refer to entrance check-in. Use only the information given here. There is no timer."
+  ],
+  "candidates": [
+    {
+      "id": "lighthouse",
+      "name": "Lighthouse Slope",
+      "time": "19:10",
+      "minute_of_day": 1150,
+      "roofed": false,
+      "roof_label": "An uncovered stretch on the way"
+    },
+    {
+      "id": "wharf",
+      "name": "Wharf Way",
+      "time": "19:20",
+      "minute_of_day": 1160,
+      "roofed": true,
+      "roof_label": "Roof all the way from entrance to station"
+    },
+    {
+      "id": "market",
+      "name": "Market Street",
+      "time": "19:40",
+      "minute_of_day": 1180,
+      "roofed": true,
+      "roof_label": "Roof all the way from entrance to station"
+    },
+    {
+      "id": "oldtrack",
+      "name": "Old Track Way",
+      "time": "19:50",
+      "minute_of_day": 1190,
+      "roofed": false,
+      "roof_label": "An uncovered stretch on the way"
+    }
+  ],
+  "cards": [
+    {
+      "id": "A",
+      "heading": "Card A · Haruka’s envelope",
+      "text": "Check-in is after seven in the evening, but before the minute hand of the harbor clock first points straight down after seven. Check-in has ended at the instant it points down. Check in at the time printed on the route notice.",
+      "hint": "After seven, when does the minute hand first point straight down?",
+      "constraints": [
+        {
+          "field": "minute_of_day",
+          "op": "gt",
+          "value": 1140
+        },
+        {
+          "field": "minute_of_day",
+          "op": "lt",
+          "value": 1170
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "heading": "Card B · Shu’s parcel",
+      "text": "Take the borrowed paper sign out of its clear case at the entrance and carry it unchanged until returning it at the station. It is raining tonight. On the booked route you can walk from entrance to station without opening an umbrella or getting the sign wet. Every roof listed keeps out the rain.",
+      "hint": "Find routes with an unbroken roof from entrance to station.",
+      "constraints": [
+        {
+          "field": "roofed",
+          "op": "eq",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "answer_id": "wharf",
+  "explanation": "After seven, the minute hand first points straight down at 19:30. Card A requires a check-in after 19:00 and before 19:30: Lighthouse Slope (19:10) and Wharf Way (19:20) remain. Card B requires an unbroken roof from entrance to station: Wharf Way and Market Street remain. Only Wharf Way meets both. Lighthouse Slope fails the roof condition; Market Street fails the time condition; Old Track Way fails both.",
+  "ending": "At the Wharf Way desk, Haruka set down the time card and Shu the parcel card. The attendant checked both and opened a small gate. Rain shone silver beyond the roof. At the station, Shu returned the paper sign and Haruka tucked the exhibition leaflet into her notebook. “I wanted to see that picture in daylight too.” “Next year we can come during the day.” They went to their separate train platforms. This time, neither had lost the way.",
+  "boundary": "This mystery identifies only a fictional booked route. It does not judge romantic feelings, consent or a future promise. The story is complete when they reach the station."
+}

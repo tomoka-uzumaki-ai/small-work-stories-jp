@@ -1,0 +1,130 @@
+{
+  "title": "The Night Archive",
+  "subtitle": "Two after-hours tasks to prepare tomorrow’s exhibition together",
+  "version": "0.1.0",
+  "disclosure": "Original fiction created with AI assistance. Nao, 32, and Ren, 35, are fictional adults.",
+  "introduction": "After the last visitor leaves, the archive grows quiet. Nao and Ren have two tasks left: the entrance map and the morning display board. Talk through their separate work records and finish preparing the “Harbor Memories” exhibition for tomorrow.",
+  "rules": [
+    "Choose players A and B. Both may read each case’s shared information and answer choices.",
+    "On one device, open only your own card, close it when finished, then pass the device to your partner. Share its information aloud as freely as you wish.",
+    "For solo play, read A and B in turn and combine their information.",
+    "Each card has an optional hint. Choose one answer to check, or read the answer, reasoning and ending whenever you wish.",
+    "All necessary information is inside each case. You do not need the previous case’s answer or outside knowledge of archives.",
+    "This trial includes one complete case, its reasoning, and its ending."
+  ],
+  "cases": [
+    {
+      "id": "shelves",
+      "title": "Case 1 · The shelf handover",
+      "task_kind": "Compose three ordered swaps between fixed shelves",
+      "intro": "The archive has closed for the evening. Exhibition staff Nao, 32, and Ren, 35, are preparing tomorrow’s “Harbor Memories” display. An old map will go by the entrance so visitors can trace the town’s walking routes with a finger. Four documents were swapped between storage shelves three times. Nao recorded the first and last operations; Ren recorded the middle one. Join their records to find the map’s current shelf before collecting it.",
+      "shared_heading": "Arrangement before the three operations",
+      "public_items": [
+        {
+          "label": "Shelf 1",
+          "detail": "Folded harbor map",
+          "shelf": 1,
+          "document_id": "map"
+        },
+        {
+          "label": "Shelf 2",
+          "detail": "Group photograph at the pier",
+          "shelf": 2,
+          "document_id": "photograph"
+        },
+        {
+          "label": "Shelf 3",
+          "detail": "Opening-day visitors’ book",
+          "shelf": 3,
+          "document_id": "visitors-book"
+        },
+        {
+          "label": "Shelf 4",
+          "detail": "First screening program",
+          "shelf": 4,
+          "document_id": "program"
+        }
+      ],
+      "shared_note": "Shelf numbers 1, 2, 3 and 4 are fixed: the shelves themselves do not move. Each shelf holds one of the four documents above. Every operation swaps the contents of two different shelves. Operations 1, 2 and 3 happen once each, in that order, with no other moves. A pair of shelves may be swapped again in another operation. Find the map’s location after operation 3.",
+      "cards": [
+        {
+          "id": "A",
+          "heading": "Card A · The first and last entries",
+          "text": "I recorded operations 1 and 3.\nOperation 1: swap the documents in shelves 1 and 2.\nOperation 3: swap the documents in shelves 3 and 4.\nOperation 2 happened between these two. Do not jump straight from operation 1 to operation 3: ask your partner for the missing middle entry.",
+          "hint": "The map starts in shelf 1. Where does operation 1 move it? Tell your partner that position, ask what operation 2 does, then apply operation 3.",
+          "constraints": [
+            {
+              "op": "swap_at_step",
+              "step": 1,
+              "shelves": [
+                1,
+                2
+              ]
+            },
+            {
+              "op": "swap_at_step",
+              "step": 3,
+              "shelves": [
+                3,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "heading": "Card B · The middle entry",
+          "text": "I recorded operation 2.\nOperation 2: swap the documents in shelves 2 and 3.\nThis is the middle of three operations. Ask your partner where the documents are immediately before it, then describe their positions after this swap.",
+          "hint": "Swap the documents in shelves 2 and 3 after operation 1, not the documents that occupied those shelves in the starting arrangement.",
+          "constraints": [
+            {
+              "op": "swap_at_step",
+              "step": 2,
+              "shelves": [
+                2,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "answer_heading": "Which shelf holds the map after all three operations?",
+      "candidates": [
+        {
+          "id": "shelf-1",
+          "label": "Shelf 1",
+          "detail": "The map’s location after operation 3",
+          "shelf": 1
+        },
+        {
+          "id": "shelf-2",
+          "label": "Shelf 2",
+          "detail": "The map’s location after operation 3",
+          "shelf": 2
+        },
+        {
+          "id": "shelf-3",
+          "label": "Shelf 3",
+          "detail": "The map’s location after operation 3",
+          "shelf": 3
+        },
+        {
+          "id": "shelf-4",
+          "label": "Shelf 4",
+          "detail": "The map’s location after operation 3",
+          "shelf": 4
+        }
+      ],
+      "answer_id": "shelf-4",
+      "explanation": "The map starts in shelf 1. Operation 1 swaps shelves 1 and 2, moving the map to shelf 2. Operation 2 swaps shelves 2 and 3, moving it to shelf 3. Operation 3 swaps shelves 3 and 4, so it finishes in shelf 4. The final arrangement is photograph, visitors’ book, screening program, map in shelves 1 through 4. Card A leaves the middle swap unknown. Card B leaves the swaps before and after it unknown. Neither card alone identifies the map’s final shelf.",
+      "ending": "Ren lifts the map from shelf 4. An old ferry landing’s name appears between its folds. Nao spreads it across the low display table by the entrance and adds a small label with today’s street names. “Someone visiting for the first time might want to walk this route.” They put the photograph and visitors’ book in their assigned places and record the shelves’ final arrangement on the handover sheet. The map is ready to welcome tomorrow’s visitors; the storage task is finished.",
+      "model": {
+        "kind": "ordered_swaps",
+        "shelf_count": 4,
+        "steps": 3,
+        "target_document": "map"
+      }
+    }
+  ],
+  "closing": "The map is ready for tomorrow. In the full collection, a copied panel record needs one final correction before the reading room opens."
+}

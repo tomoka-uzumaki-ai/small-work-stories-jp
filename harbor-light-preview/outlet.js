@@ -17,7 +17,7 @@
   const formats = document.createElement('p');
   formats.textContent = en ? 'One itch.io purchase includes the complete bilingual HTML reader ZIP and EPUB, with the same story and three illustrations. The HTML reader has language and ending controls; the EPUB uses chapter links in a compatible reading app.' : 'itch.ioの同じ購入に、日英の読書HTML ZIPとEPUBを含みます。物語とイラスト三点は同じ内容です。HTMLでは言語・結末を切り替え、EPUBは対応する読書アプリで章内リンクを使って読みます。';
   const linkP = document.createElement('p');
-  const a = document.createElement('a');a.href=shop;a.className='paid-link';
+  const a = document.createElement('a');a.href=shop;a.className='button paid-link';
   a.textContent = en ? 'Read the complete story on itch.io · US$3 minimum' : 'itch.ioで全三場面・両結末を読む · 最低US$3';
   linkP.append(a);
   const terms = document.createElement('p');terms.className='note';

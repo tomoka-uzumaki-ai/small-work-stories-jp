@@ -22,7 +22,7 @@
   linkP.append(a);
   const terms = document.createElement('p');terms.className='note';
   terms.textContent = en ? 'For personal viewing and noncommercial personal printing. Extract the full ZIP before opening index.html in a compatible browser. Phone file-viewer support and EPUB app rendering vary. Check the final checkout total. The first scene stays free.' : '個人鑑賞・個人の非商用印刷向けです。ZIPはすべて展開し、対応ブラウザーでindex.htmlを開きます。スマホのファイル表示やEPUBの表示はアプリにより異なります。最終額は決済画面でご確認ください。第一場面は引き続き無料です。';
-  const sampleP=document.createElement('p');const sample=document.createElement('a');sample.href=ep;
+  const sampleP=document.createElement('p');const sample=document.createElement('a');sample.href=ep+'?from=itch';
   sample.textContent=en?'Check the free first-scene EPUB in your reading app':'無料の第一場面EPUBで、読書アプリの表示を確かめる';sampleP.append(sample);
   offer.replaceChildren(title,description,size,formats,linkP,terms,sampleP);
   if(!en){

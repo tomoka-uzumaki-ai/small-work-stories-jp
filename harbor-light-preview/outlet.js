@@ -18,7 +18,7 @@
   formats.textContent = en ? 'One itch.io purchase includes the complete bilingual HTML reader ZIP and EPUB, with the same story and three illustrations. The HTML reader has language and ending controls; the EPUB uses chapter links in a compatible reading app.' : 'itch.ioの同じ購入に、日英の読書HTML ZIPとEPUBを含みます。物語とイラスト三点は同じ内容です。HTMLでは言語・結末を切り替え、EPUBは対応する読書アプリで章内リンクを使って読みます。';
   const linkP = document.createElement('p');
   const a = document.createElement('a');a.href=shop;a.className='button paid-link';
-  a.textContent = en ? 'Read the complete story on itch.io · US$3 minimum' : 'itch.ioで全三場面・両結末を読む · 最低US$3';
+  a.textContent = en ? 'Read the complete story on itch.io · regular minimum US$3' : 'itch.ioで全三場面・両結末を読む · 通常最低US$3';
   linkP.append(a);
   const terms = document.createElement('p');terms.className='note';
   terms.textContent = en ? 'For personal viewing and noncommercial personal printing. Extract the full ZIP before opening index.html in a compatible browser. Phone file-viewer support and EPUB app rendering vary. Check the final checkout total. The first scene stays free.' : '個人鑑賞・個人の非商用印刷向けです。ZIPはすべて展開し、対応ブラウザーでindex.htmlを開きます。スマホのファイル表示やEPUBの表示はアプリにより異なります。最終額は決済画面でご確認ください。第一場面は引き続き無料です。';
@@ -30,8 +30,10 @@
     for(const id of ['original-purchase-link','original-price-note','original-image-note']){const e=document.getElementById(id);if(e)e.hidden=true;}
   }
   for(const a of document.querySelectorAll('a')){
-    const u=new URL(a.getAttribute('href') || '',location.href);
-    if(u.origin===location.origin && /\/harbor-light-preview\/(?:en\.html)?$/.test(u.pathname)){
+    const raw=a.getAttribute('href');
+    if(!raw || raw.startsWith('#')) continue;
+    const u=new URL(raw,location.href);
+    if(u.origin===location.origin && /\/(?:harbor-light-preview|epub-reader)\/(?:index\.html|en\.html)?$/.test(u.pathname)){
       u.searchParams.set('from','itch');a.href=u.pathname+u.search+u.hash;
     }
   }

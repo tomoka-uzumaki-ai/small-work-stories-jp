@@ -36,6 +36,7 @@ function runPreview(html,href,lang) {
 }
 for(const [name,lang] of [['index.html','ja'],['en.html','en']]) {
  const html=fs.readFileSync(path.join(__dirname,'../harbor-light-preview/',name),'utf8');
+ assert.match(html,/src="outlet\.js\?v=20261030b"/,'preview loads the current fixed outlet asset version');
  const href='https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/harbor-light-preview/'+(lang==='en'?'en.html':'');
  const before=[...html.matchAll(/<a\b[^>]*href="([^"]*)"[^>]*>/g)].map(m=>m[1]);
  for(const suffix of ['','?from=other','?from=itch.example']) assert.deepEqual(runPreview(html,href+suffix,lang).map(a=>a.href),before);

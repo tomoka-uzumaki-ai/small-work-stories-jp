@@ -85,7 +85,7 @@ const workflowPath=/\/(?:two-roads|harbor-first-case|harbor-first-case-en|creato
 let checkedInternal=0,checkedPurchases=0;
 for(const file of gumPages){
  const html=fs.readFileSync(path.join(__dirname,'..',file),'utf8');
- const script=/src="([^"]*gumroad-outlet\.js\?v=20261030-gumroad1)"/.exec(html);
+ const script=/src="([^"]*gumroad-outlet\.js\?v=20261030-gumroad[12])"/.exec(html);
  assert.ok(script,file+' loads the fixed shared source');
  assert.equal(path.resolve(path.dirname(path.join(__dirname,'..',file)),script[1].split('?')[0]),path.resolve(__dirname,'../gumroad-outlet.js'));
  const href='https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/'+file;
@@ -106,7 +106,7 @@ for(const file of gumPages){
   }else assert.equal(anchor.href,before[i],file+' leaves download/external/alternative choice unchanged');
  }
  for(const p of dom.document.querySelectorAll('[data-gumroad-session-format]')){
-  assert.match(p.textContent,/日本語の文章版|Japanese text/);assert.match(p.textContent,/自動判定・ゲームZIP・写真ファイル・英語PDFは付属しません|does not include automatic answer checking, a game ZIP, photographs or an English PDF/);
+  assert.match(p.textContent,/日本語・英語の文章版|English and Japanese text/);assert.match(p.textContent,/自動判定・ゲームZIP・写真ファイルは付属しません|Automatic answer checking, a game ZIP and photographs are not included/);
  }
  for(const p of dom.document.querySelectorAll('[data-gumroad-duplicate]'))assert.equal(p.hidden,true,'same-store duplicate is hidden only for Gumroad');
  if(oldBuy)assert.equal(oldBuy.hidden,true,'input checker still requires its existing material/order confirmation before purchase CTA is shown');

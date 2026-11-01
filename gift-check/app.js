@@ -8,4 +8,4 @@ $('form').onsubmit=e=>{e.preventDefault();const kind=$('kind').value,format=$('f
  else if(read){trial='../viewer-trial/';description='日英3場面・両結末と3画像のHTML読書版。無料の保存用HTMLを相手の端末で試してください。'}
  else if(format==='pdf'){trial='../print-and-play/';description=lang==='en'?'英語のみの13ページPDF。無料5ページの完結ケースで、読めるか・印刷できるかを試してください。日英HTMLも同じ購入に含まれます。':'印刷用PDFは英語のみです。日本語で紙遊びができる商品としては案内しません。日本語HTMLなら形式を変更し、無料ゲームを試してください。'}
  else{trial=lang==='en'?'../harbor-first-case-en/':'../harbor-first-case/';description='同じ3問の日英HTMLゲーム。無料ケースと保存用ZIPを試し、カードを閉じて端末を渡してください。'}
- $('detail').textContent=description+(ok?' 最低US$3。正規のギフト画面で商品・条件・最終額を確認してください。':' 相手の環境・試用・連絡の確認が済むまで購入リンクは表示しません。');$('trial').href=trial;$('buy').href='https://tiny-deduction-lab.itch.io/'+(read?'harbor-lights':'three-harbor-signs');$('result').hidden=false;$('buy').hidden=!ok};setup();
+ $('detail').textContent=description+(ok?' 通常価格US$3。正規のギフト画面で商品・条件・最終額を確認してください。':' 相手の環境・試用・連絡の確認が済むまで購入リンクは表示しません。');$('trial').href=trial;$('buy').href='https://tiny-deduction-lab.itch.io/'+(read?'harbor-lights':'three-harbor-signs');$('result').hidden=false;$('buy').hidden=!ok};setup();

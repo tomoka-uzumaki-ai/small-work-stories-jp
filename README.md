@@ -15,7 +15,7 @@
 |受け取り方|表示価格|内容|
 |---|---|---|
 |[Gumroadの読書版](https://jikkenlog.gumroad.com/l/harbor-lights-reading)|500円JPY|購入後ページの日英全文と、完成済みHTML読書ZIP|
-|[itch.ioの読書版](https://tiny-deduction-lab.itch.io/harbor-lights)|最低US$3|同じ作品のHTML読書ZIPと日英EPUB。言語・結末切替と画像ギャラリー|
+|[itch.ioの読書版](https://tiny-deduction-lab.itch.io/harbor-lights)|通常価格US$3|同じ作品のHTML読書ZIPと日英EPUB。言語・結末切替と画像ギャラリー|
 
 一人で読む物語と問いを選ぶなら、[「灯りを選ぶ夜」の二枚を無料で最後まで読む](https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/light-night-preview/)こともできます。[Gumroadの12枚版](https://jikkenlog.gumroad.com/l/choosing-a-light-tonight)は表示500円JPY。日本語の物語・問い、線画12点、HTML読書ページと家庭印刷用の試作A4面付けを収録します。題名・情景には英訳がありますが、本文全体の英語版ではありません。
 
@@ -34,7 +34,7 @@
 
 [日英リーダーの無料構造デモ](https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/creator-reader-demo/)で、言語・結末の切替と完成する読書ページを試せます。
 
-日英リーダー制作キットは、自分の本文と画像からHTML・EPUBを作り、納品ZIP作成と受取ファイル照合を行うコード・入力例・日英手順のZIPです。[Gumroadは表示500円JPY](https://jikkenlog.gumroad.com/l/bilingual-reader-source-kit)、[itch.ioは最低US$3](https://tiny-deduction-lab.itch.io/bilingual-reader-kit)。同じ制作キットなので、両方の購入は不要です。
+日英リーダー制作キットは、自分の本文と画像からHTML・EPUBを作り、納品ZIP作成と受取ファイル照合を行うコード・入力例・日英手順のZIPです。[Gumroadは表示500円JPY](https://jikkenlog.gumroad.com/l/bilingual-reader-source-kit)、[itch.ioは通常価格US$3](https://tiny-deduction-lab.itch.io/bilingual-reader-kit)。同じ制作キットなので、両方の購入は不要です。
 
 購入前に、Python 3.10が動くパソコン、自分の三場面・二結末の日英本文、利用権のある1024×1536pxのPNG3点を用意してください。作品本文・翻訳・完成イラストの作成は付属しません。コードと例文は、同梱の許諾通知を残す条件で利用・改変・再配布・販売でき、生成した作品は自分の素材の権利に従って商用利用できます。素材の権利や売場での受入れは別途確認が必要です。
 

@@ -26,9 +26,9 @@
 |受け取り方|表示価格|内容|
 |---|---|---|
 |[Gumroadの文章セッション版](https://jikkenlog.gumroad.com/l/three-harbor-signs-text-session)|500円JPY|購入後ページで共有・A・B・解答を分けて読む文章版。自動判定・ZIPは付属しません|
-|[itch.ioのゲーム・印刷版](https://tiny-deduction-lab.itch.io/three-harbor-signs)|最低US$3|同じ3ケースの日英HTMLゲームZIPと英語の印刷PDF13ページ|
+|[itch.ioのゲーム・印刷版](https://tiny-deduction-lab.itch.io/three-harbor-signs)|最低US$3|同じ3ケースの日英HTMLゲームZIPと日本語・英語各13ページの印刷PDF|
 
-端末一台では相手へ渡す前に自分のカードを閉じます。英語PDFはA4・100%で片面印刷。[無料の別作品「二枚の帰り道」](https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/two-roads/)も、結末まで無料で遊べます。
+端末一台では相手へ渡す前に自分のカードを閉じます。PDFはA4・100%で片面印刷。[無料の別作品「二枚の帰り道」](https://tomoka-uzumaki-ai.github.io/small-work-stories-jp/two-roads/)も、結末まで無料で遊べます。
 
 ## 自分の作品を作る
 
